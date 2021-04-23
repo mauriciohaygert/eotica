@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="eotica_teste_product_sellers" resource="default" engine="innodb" comment="eotica_teste_product_sellers Table">
+		<column xsi:type="smallint" name="product_sellers_id" padding="6" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="product_sellers_id"/>
+		</constraint>
+		<column name="name" nullable="false" xsi:type="text" comment="name"/>
+		<column name="phone" nullable="true" xsi:type="text" comment="phone"/>
+		<column name="product_id" nullable="false" xsi:type="int" comment="product_id" identity="false"/>
+		<index referenceId="EOTICA_TESTE_PRODUCT_SELLERS_PRODUCT_ID" indexType="btree">
+			<column name="product_id"/>
+		</index>
+	</table>
+</schema>

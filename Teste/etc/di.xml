@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="EOtica\Teste\Api\ProductSellersRepositoryInterface" type="EOtica\Teste\Model\ProductSellersRepository"/>
+	<preference for="EOtica\Teste\Api\Data\ProductSellersInterface" type="EOtica\Teste\Model\Data\ProductSellers"/>
+	<preference for="EOtica\Teste\Api\Data\ProductSellersSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+</config>

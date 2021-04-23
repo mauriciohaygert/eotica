@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+	<route url="/V1/eotica-teste/product_sellers" method="POST">
+		<service class="EOtica\Teste\Api\ProductSellersRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="EOtica_Teste::product_sellers_save"/>
+		</resources>
+	</route>
+	<route url="/V1/eotica-teste/product_sellers/search" method="GET">
+		<service class="EOtica\Teste\Api\ProductSellersRepositoryInterface" method="getList"/>
+		<resources>
+			<resource ref="EOtica_Teste::product_sellers_view"/>
+		</resources>
+	</route>
+	<route url="/V1/eotica-teste/product_sellers/:productSellersId" method="GET">
+		<service class="EOtica\Teste\Api\ProductSellersRepositoryInterface" method="get"/>
+		<resources>
+			<resource ref="EOtica_Teste::product_sellers_view"/>
+		</resources>
+	</route>
+	<route url="/V1/eotica-teste/product_sellers/:productSellersId" method="PUT">
+		<service class="EOtica\Teste\Api\ProductSellersRepositoryInterface" method="save"/>
+		<resources>
+			<resource ref="EOtica_Teste::product_sellers_update"/>
+		</resources>
+	</route>
+	<route url="/V1/eotica-teste/product_sellers/:productSellersId" method="DELETE">
+		<service class="EOtica\Teste\Api\ProductSellersRepositoryInterface" method="deleteById"/>
+		<resources>
+			<resource ref="EOtica_Teste::product_sellers_delete"/>
+		</resources>
+	</route>
+</routes>
